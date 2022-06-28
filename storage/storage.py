@@ -12,3 +12,6 @@ class StorageByZapier:
 
     def put(self,data):
         response = requests.post('https://store.zapier.com/api/records', headers=self.auth_header, data=json.dumps(data))
+
+    def delete(self):
+        response = requests.delete('https://store.zapier.com/api/records', headers=self.auth_header)
